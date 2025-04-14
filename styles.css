@@ -1,0 +1,361 @@
+/*Code By London Davis*/
+
+/*Imported fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/*CSS Reset*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --font-serif: 'Playfair Display', serif;
+  --midnight-blue: #1F2A44;
+  --olive-green: #76885B;
+  --champagne-gold: #E5C185;
+  --linen: #F8F4EC;
+  --dark-charcoal: #2B2B2B;
+  --soft-white: #FAF9F6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--soft-white);
+  color: var(--dark-charcoal);
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+/* Header */
+header {
+  background-color: var(--midnight-blue);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+header img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--champagne-gold);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+nav a {
+  color: var(--dark-charcoal);
+  text-decoration: none;
+  flex: 1 1 auto;
+  text-align: center;
+  min-width: 100px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Main Content */
+main {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+main p {
+  margin-bottom: 1.5rem;
+}
+
+
+/*Card Styles*/
+.section-divider {
+  height: 2px;
+  background-color: var(--champagne-gold);
+  margin: 2rem 0;
+}
+
+/* Base layout: stack all cards */
+.offerings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--olive-green);
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+figure {
+  background-color: var(--linen);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding-bottom: 2em;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Button */
+.button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--olive-green);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #5c6b45;
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--midnight-blue);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--champagne-gold);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*Responsive Designs*/
+
+/* Medium*/
+@media (min-width: 600px) {
+  .offerings {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .card:last-child {
+    flex-basis: 100%;
+  }
+}
+
+/* Large*/
+@media (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(5, 1fr)
+  }
+}
